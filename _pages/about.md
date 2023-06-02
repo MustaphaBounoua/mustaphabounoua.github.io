@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Eurecom, Renault Software Labs</a>. Sophia-Antipolis, France.
+subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom</a>,<a href='https://www.renaultgroup.com/en/our-company/locations/software-labs-sophia-antipolis-2/'>Renault Software Labs</a> Sophia-Antipolis, France.
 
 profile:
   align: right
@@ -15,7 +15,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a PhD candidate in the department of Data Science at Eurecom and Renault software lab. I am supervised by professor Pietro Michiardi and Chritophe Beaugeant. I graduated from Paris Descartes University with a Master degree in Computer science and I’m previously a graduate of a double degree in computer science at the higher school of computer science. I’m worked as a data
+I am a PhD candidate in the department of Data Science at Eurecom and Renault software lab. I am supervised by <a href='https://www.eurecom.fr/~michiard/'>Prof Pietro Michiardi</a> and Phd Chritophe Beaugeant. I graduated from Paris Descartes University with a Master degree in Computer science and I’m previously a graduate of a double degree in computer science at the higher school of computer science. I’m worked as a data
 scientist at Orange and completed several internships in Machine learning at Huawei, Opta-LP and Gen-42.
 
 Research Interests: I have broad research interests in machine learning. Specifically, my research interests lie in:
