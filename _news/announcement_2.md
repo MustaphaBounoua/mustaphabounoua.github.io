@@ -4,4 +4,4 @@ date: 2023-10-13
 inline: true
 related_posts: false
 ---
-Check out our new paper <a href='MINDE: Mutual Information Neural Diffusion Estimation'>Multi-modal Latent Diffusion</a>
+Check out our new paper <a href='https://arxiv.org/abs/2310.09031'>MINDE: Mutual Information Neural Diffusion Estimation</a>
