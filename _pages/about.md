@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom</a>, <a href='https://www.renaultgroup.com/en/our-company/locations/software-labs-sophia-antipolis-2/'> Renault Software Labs</a> Sophia-Antipolis, France.
 
@@ -12,7 +12,7 @@ profile:
    
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 I am a PhD candidate in the department of Data Science at Eurecom and Renault software lab. I am supervised by <a href='https://www.eurecom.fr/~michiard/'>Prof Pietro Michiardi</a> and Phd Chritophe Beaugeant. I graduated from Paris Descartes University with a Master degree in Computer science and I’m previously a graduate of a double degree in computer science at the higher school of computer science. I worked as a data
