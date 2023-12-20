@@ -270,7 +270,7 @@ scholar:
   last_name: BOUNOUA
   first_name: Mustapha
 
-  style: alphabetic
+  style: apa
   locale: en
 
   source: /_bibliography/
