@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom</a>, <a href='https://www.renaultgroup.com/en/our-company/locations/software-labs-sophia-antipolis-2/'> Renault Software Labs</a> Sophia-Antipolis, France.
+subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom</a>, <a href='https://www.ampere.cars/'> Ampere </a> Sophia-Antipolis, France.
 
 profile:
   align: right
