@@ -9,8 +9,8 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD in AI & Data Science
-      institution: Eurecom , Renault software labs,  France
+    - title: PhD in AI 
+      institution: Eurecom , Ampere software technologie,  France
       year: 2022-NOW
       description:
         - Multimodal generative models.
