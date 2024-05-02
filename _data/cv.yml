@@ -10,7 +10,7 @@
   type: time_table
   contents:
     - title: PhD in AI 
-      institution: Eurecom , Ampere software technologie,  France
+      institution: Eurecom , Sorbonne Université,  France
       year: 2022-NOW
       description:
         - Multimodal generative models.
@@ -24,8 +24,8 @@
 - title: Experience
   type: time_table
   contents:
-    - title: PhD AI Researcher
-      institution: Renault Software Labs,  France
+    - title: PhD Cifre
+      institution: Ampere,  France
       year: 2022-NOW
       description:
         - Multimodal generative models.
