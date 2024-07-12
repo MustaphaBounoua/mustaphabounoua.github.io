@@ -8,12 +8,12 @@ middle_name:
 last_name: Bounoua
 email: mustapha.bounoua@eurecom.fr
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD cifre candidate at Eurecom and Renault Software Lab
+  PhD cifre candidate at Eurecom and Ampere Software technologie
 footer_text: >
 keywords: Bounoua, Mustapha, Diffusion models, MLD, Multi-modal  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon:   # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://mustaphabounoua.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
