@@ -4,14 +4,14 @@
     - name: Full Name
       value: Mustapha Bounoua
     - name: Languages
-      value: English, French, Arabic, Kabyle
+      value: English, French
 
 - title: Education
   type: time_table
   contents:
     - title: PhD in AI 
-      institution: Eurecom , Sorbonne Université,  France
-      year: 2022-NOW
+      institution: Sorbonne Université,  France
+      year: 2022-2025
       description:
         - Multimodal generative models.
     - title: Master degree in Computer science
@@ -24,9 +24,14 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Postdoctoral Researcher
+      institution: Eurecon,  France
+      year: 2025-Present
+      description:
+        - Multimodal generative models.
     - title: PhD Cifre
-      institution: Ampere,  France
-      year: 2022-NOW
+      institution: Sorbonne University & Ampere,  France
+      year: 2022-2025
       description:
         - Multimodal generative models.
 
