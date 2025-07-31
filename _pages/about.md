@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom</a>, <a href='https://www.ampere.cars/'> Ampere Software Technology </a> Sophia-Antipolis, France.
+subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom, </a> France.
 
 profile:
   align: right
@@ -15,4 +15,4 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I'm a postdoctoral research scientist specializing in generative modeling, multimodal learning, diffusion models and information-theoretic estimation.
+I'm a postdoctoral research scientist specializing in generative modeling, multimodal learning, diffusion models.
