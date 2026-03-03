@@ -133,6 +133,21 @@
           {{ entry.note | strip }}
         </div>
 
+        <!-- Presentation type badge -->
+        {%- if entry.presentation_type -%}
+        <div class="presentation-type">
+          <span class="badge badge-presentation">
+            {%- if entry.presentation_type == "oral" -%}
+              🎤 Oral
+            {%- elsif entry.presentation_type == "poster" -%}
+              📊 Poster
+            {%- else -%}
+              {{ entry.presentation_type | capitalize }}
+            {%- endif -%}
+          </span>
+        </div>
+        {%- endif -%}
+
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
