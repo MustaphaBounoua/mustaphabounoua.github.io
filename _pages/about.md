@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.eurecom.fr/fr'>Eurecom, </a> France.
+subtitle: "<a href='https://www.eurecom.fr/fr'>Eurecom, </a> France."
 
 profile:
   align: right
@@ -13,3 +13,6 @@ profile:
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
+---
+
+<!-- You can add homepage content here, such as a short bio or welcome message -->
