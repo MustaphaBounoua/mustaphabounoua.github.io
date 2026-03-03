@@ -12,7 +12,4 @@ profile:
    
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
----
-I am a postdoctoral researcher in machine learning with a focus on generative models and multimodal learning. I am particularly interested in diffusion models and principled approaches to understanding and aligning complex data modalities. My research combines methodological development with applications across vision, language, and scientific data.
+selected_papers: true # includes a list of papers marked as "selected={true}"
