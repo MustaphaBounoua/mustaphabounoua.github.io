@@ -570,13 +570,36 @@ footer.sticky-bottom {
     text-align: right;
   }
 
+  .year-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    .year-header {
+      color: var(--global-theme-color);
+      font-size: 1.8rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--global-theme-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+  }
+
   ol.bibliography {
     list-style: none;
     padding: 0;
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
 
       .preview {
         width: 100%;
