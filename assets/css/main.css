@@ -633,6 +633,16 @@ footer.sticky-bottom {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
 }
+.publications ol.bibliography li .presentation-type {
+  padding-bottom: 0.5rem;
+}
+.publications ol.bibliography li .presentation-type .badge-presentation {
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
 .publications ol.bibliography li .badges {
   padding-bottom: 0.5rem;
 }
