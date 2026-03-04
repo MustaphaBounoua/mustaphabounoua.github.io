@@ -602,9 +602,15 @@ footer.sticky-bottom {
       }
 
       .preview {
+        /* make preview images larger; allow them to expand up to 400px
+           (was 200px) and remove the strict minimum so small thumbnails
+           aren't overly shrunk. This gives the publication page a more
+           expressive look. */
         width: 100%;
-        min-width: 80px;
-        max-width: 200px;
+        /* no enforced minimum, let the image size be determined by its
+           natural dimensions or the column width */
+        min-width: 0;
+        max-width: 400px; /* users can also customize to taste */
       }
       .preview abbr.badge {
         display: inline-block;
@@ -654,9 +660,11 @@ footer.sticky-bottom {
           }
         }
 
-        >em {
+        /* bold the self-author name; previously used <em> for emphasis */
+        >strong {
           border-bottom: 1px solid;
-          font-style: normal;
+          font-style: normal; /* keep style rule in case future change needs it */
+          font-weight: 700;
         }
 
         >span.more-authors {

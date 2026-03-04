@@ -16,7 +16,7 @@ Your publications are organized by **year** in descending order on the `/publica
 ## Adding Publication Preview Images
 
 ### Step 1: Prepare Your Image
-Create a preview image (recommended: 200x200px or 300x300px) and save it with a descriptive name:
+Create a preview image (recommended: 200x200px or 300x300px, or larger if you want a more prominent thumbnail). The stylesheet now allows up to **400px** width for publication previews. Save it with a descriptive name:
 ```
 ddmec.png          (already exists as example)
 tende.png          (for munoz paper)
