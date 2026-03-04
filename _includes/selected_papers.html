@@ -1,7 +1,12 @@
 
           <div class="publications">
-            <!-- selected-publications list disabled; plugin returns nil when no
-                 matches which breaks builds.  You can re-enable by restoring the
-                 bibliography call when you have entries marked
-                 `selected=true` in your .bib file. -->
+            {%- comment %}Render using keys defined in _data/selected_papers.yml.  A
+            single bibliography call per key returns the full entry using the
+            familiar layout.  Removing the query avoids the nil-error bug in
+            jekyll-scholar.  You can update the YAML list whenever you mark a
+            paper as selected in your .bib file.{%- endcomment %}
+            {% for key in site.data.selected_papers %}
+              {% bibliography -f papers.bib -q "@#{key}" %}
+            {% endfor %}
+            <p class="small mt-1"><em>* means equal contribution</em></p>
           </div>

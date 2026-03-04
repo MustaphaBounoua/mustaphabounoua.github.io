@@ -47,12 +47,13 @@
           {%- assign author_is_self = false -%}
 
           {%- comment %}
-            strip any equal-contribution markers ("^*") from the first/last
-            names for display and comparison.  all comparisons are done
-            lowercase to avoid case-sensitivity issues.
+            we keep the raw first/last names (including ^* markers) for
+            display; the markers will be filtered out only for comparison
+            when detecting "self".  this ensures equal-contribution symbols
+            remain visible on the page.
           {%- endcomment %}
-          {%- assign display_first = author.first | remove: "^*" | strip -%}
-          {%- assign display_last = author.last | remove: "^*" | strip -%}
+          {%- assign display_first = author.first -%}
+          {%- assign display_last = author.last -%}
 
           {%- comment %}
             generate two versions of the last name: one cleaned but still with
@@ -61,11 +62,12 @@
           {%- endcomment %}
           {%- assign author_last_clean = display_last
               | remove: "¶" | remove: "&" | remove: "*" | remove: "†"
-              | remove: "^" | strip -%}
+              | remove: "^*" | remove: "^" | strip -%}
           {%- assign author_last_name = author_last_clean | downcase -%}
           {%- assign scholar_last = site.scholar.last_name | downcase -%}
           {%- if scholar_last contains author_last_name -%}
-            {%- assign author_first_norm = display_first | downcase -%}
+            {%- assign author_first_norm = display_first
+                | remove: "^*" | downcase -%}
             {%- assign scholar_first = site.scholar.first_name | downcase -%}
             {%- if scholar_first contains author_first_norm -%}
               {%- assign author_is_self = true -%}
