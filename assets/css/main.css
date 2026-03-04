@@ -593,9 +593,15 @@ footer.sticky-bottom {
   padding-bottom: 0;
 }
 .publications ol.bibliography li .preview {
+  /* make preview images larger; allow them to expand up to 400px
+     (was 200px) and remove the strict minimum so small thumbnails
+     aren't overly shrunk. This gives the publication page a more
+     expressive look. */
   width: 100%;
-  min-width: 80px;
-  max-width: 200px;
+  /* no enforced minimum, let the image size be determined by its
+     natural dimensions or the column width */
+  min-width: 0;
+  max-width: 400px; /* users can also customize to taste */
 }
 .publications ol.bibliography li .preview abbr.badge {
   display: inline-block;
@@ -635,9 +641,13 @@ footer.sticky-bottom {
   border-bottom-style: solid;
   text-decoration: none;
 }
-.publications ol.bibliography li .author > em {
+.publications ol.bibliography li .author {
+  /* bold the self-author name; previously used <em> for emphasis */
+}
+.publications ol.bibliography li .author > strong {
   border-bottom: 1px solid;
-  font-style: normal;
+  font-style: normal; /* keep style rule in case future change needs it */
+  font-weight: 700;
 }
 .publications ol.bibliography li .author > span.more-authors {
   color: var(--global-text-color-light);
