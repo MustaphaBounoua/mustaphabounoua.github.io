@@ -606,6 +606,14 @@ footer.sticky-bottom {
         min-width: 80px;
         max-width: 200px;
       }
+      .preview abbr.badge {
+        display: inline-block;
+        background-color: var(--global-theme-color);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.5rem;
+        color: white;
+      }
 
       .abbr {
         height: 2rem;
