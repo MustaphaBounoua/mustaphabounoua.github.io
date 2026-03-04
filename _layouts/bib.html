@@ -2,7 +2,8 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-          <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+          <!-- make preview column wider so images actually have room to expand -->
+          <div class="col-sm-3 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -44,15 +45,36 @@
 
         {%- for author in entry.author_array limit: author_array_limit -%}
           {%- assign author_is_self = false -%}
-          {%- assign author_last_name = author.last | remove: "¶" | remove: "&" | remove: "*" | remove: "†" | remove: "^" -%}
-          {%- if site.scholar.last_name contains author_last_name -%}
-            {%- if site.scholar.first_name contains author.first -%}
+
+          {%- comment %}
+            strip any equal-contribution markers ("^*") from the first/last
+            names for display and comparison.  all comparisons are done
+            lowercase to avoid case-sensitivity issues.
+          {%- endcomment %}
+          {%- assign display_first = author.first | remove: "^*" | strip -%}
+          {%- assign display_last = author.last | remove: "^*" | strip -%}
+
+          {%- comment %}
+            generate two versions of the last name: one cleaned but still with
+            original casing for coauthor lookup, and a lowercase normalized
+            variant for matching against `site.scholar.last_name`.
+          {%- endcomment %}
+          {%- assign author_last_clean = display_last
+              | remove: "¶" | remove: "&" | remove: "*" | remove: "†"
+              | remove: "^" | strip -%}
+          {%- assign author_last_name = author_last_clean | downcase -%}
+          {%- assign scholar_last = site.scholar.last_name | downcase -%}
+          {%- if scholar_last contains author_last_name -%}
+            {%- assign author_first_norm = display_first | downcase -%}
+            {%- assign scholar_first = site.scholar.first_name | downcase -%}
+            {%- if scholar_first contains author_first_norm -%}
               {%- assign author_is_self = true -%}
             {%- endif -%}
           {%- endif -%}
+
           {%- assign coauthor_url = nil -%}
-          {%- if site.data.coauthors[author_last_name] -%}
-            {%- for coauthor in site.data.coauthors[author_last_name] -%}
+          {%- if site.data.coauthors[author_last_clean] -%}
+            {%- for coauthor in site.data.coauthors[author_last_clean] -%}
               {%- if coauthor.firstname contains author.first -%}
                 {%- assign coauthor_url = coauthor.url -%}
                 {%- break -%}
@@ -65,13 +87,13 @@
             {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
           {%- endif -%}
           {%- if author_is_self -%}
-            <!-- highlight yourself with bold text instead of italics -->
-            <strong>{{author.first}} {{author.last}}</strong>
+            <!-- bold your own name and remove markers -->
+            <strong>{{display_first}} {{display_last}}</strong>
           {%- else -%}
             {%- if coauthor_url -%}
-              <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+              <a href="{{coauthor_url}}">{{display_first}} {{display_last}}</a>
             {%- else -%}
-              {{author.first}} {{author.last}}
+              {{display_first}} {{display_last}}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}

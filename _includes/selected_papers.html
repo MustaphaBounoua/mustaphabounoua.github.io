@@ -1,4 +1,7 @@
 
           <div class="publications">
-            {% bibliography -f {{ site.scholar.bibliography }} -q @*[selected=true]* %}
+            <!-- selected-publications list disabled; plugin returns nil when no
+                 matches which breaks builds.  You can re-enable by restoring the
+                 bibliography call when you have entries marked
+                 `selected=true` in your .bib file. -->
           </div>
