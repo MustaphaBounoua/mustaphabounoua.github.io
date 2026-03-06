@@ -1,5 +1,12 @@
 
           <div class="publications">
-       {% bibliography -f {{ site.scholar.bibliography }} -q @*[selected=true]* %}
+            {%- comment %}
+              Render selected papers by iterating through keys defined in
+              _data/selected_papers.yml. Each bibliography call uses the entry key
+              directly, avoiding the `selected=true` field which causes nil errors.
+            {%- endcomment %}
+            {%- for key in site.data.selected_papers %}
+              {% bibliography -f papers.bib -q '@{{ key }}' %}
+            {%- endfor %}
             <p class="small mt-1"><em>* means equal contribution</em></p>
           </div>
