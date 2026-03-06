@@ -1,17 +1,23 @@
 
-          <div class="publications">
+          <div class="publications" data-selected-keys="bounoua2025learningmatchunpaireddata,bounoua2024somegai,franzese2023minde">
             {%- comment %}
-              Render all publications, but only show those with selected=true.
-              Filter using CSS based on entry IDs from _data/selected_papers.yml
+              Render selected publications. Show only the entries listed in _data/selected_papers.yml.
+              Uses JavaScript to filter the bibliography list after rendering.
             {%- endcomment %}
-            <style>
-              .publications .bibliography li { display: none !important; }
-              .publications .bibliography #bounoua2025learningmatchunpaireddata,
-              .publications .bibliography #bounoua2024somegai,
-              .publications .bibliography #franzese2023minde {
-                display: block !important;
-              }
-            </style>
             {% bibliography -f papers.bib -q @* %}
             <p class="small mt-1"><em>* means equal contribution</em></p>
           </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const pubDiv = document.querySelector('.publications[data-selected-keys]');
+              if (!pubDiv) return;
+              const selectedKeys = pubDiv.getAttribute('data-selected-keys').split(',');
+              const bibliographyItems = pubDiv.querySelectorAll('.bibliography > li');
+              bibliographyItems.forEach(function(li) {
+                const divId = li.querySelector('[id]');
+                if (!divId || !selectedKeys.includes(divId.id)) {
+                  li.style.display = 'none';
+                }
+              });
+            });
+          </script>
