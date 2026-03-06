@@ -1,16 +1,17 @@
 
           <div class="publications">
             {%- comment %}
-              Render selected papers by iterating through keys defined in
-              _data/selected_papers.yml. Each bibliography call uses the entry key
-              directly, avoiding the `selected=true` field which causes nil errors.
+              Render all publications, but only show those with selected=true.
+              Filter using CSS based on entry IDs from _data/selected_papers.yml
             {%- endcomment %}
-            {%- if site.data.selected_papers %}
-            {%- for key in site.data.selected_papers %}
-              {%- if key %}
-              {% bibliography -f papers.bib -q @{{ key }} %}
-              {%- endif %}
-            {%- endfor %}
-            {%- endif %}
+            <style>
+              .publications .bibliography li { display: none !important; }
+              .publications .bibliography #bounoua2025learningmatchunpaireddata,
+              .publications .bibliography #bounoua2024somegai,
+              .publications .bibliography #franzese2023minde {
+                display: block !important;
+              }
+            </style>
+            {% bibliography -f papers.bib -q @* %}
             <p class="small mt-1"><em>* means equal contribution</em></p>
           </div>
