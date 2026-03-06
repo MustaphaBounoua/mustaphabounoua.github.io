@@ -5,8 +5,12 @@
               _data/selected_papers.yml. Each bibliography call uses the entry key
               directly, avoiding the `selected=true` field which causes nil errors.
             {%- endcomment %}
+            {%- if site.data.selected_papers %}
             {%- for key in site.data.selected_papers %}
-              {% bibliography -f papers.bib -q '@{{ key }}' %}
+              {%- if key %}
+              {% bibliography -f papers.bib -q @{{ key }} %}
+              {%- endif %}
             {%- endfor %}
+            {%- endif %}
             <p class="small mt-1"><em>* means equal contribution</em></p>
           </div>
