@@ -17,4 +17,4 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 ---
 <!-- You can add homepage content here, such as a short bio or welcome message -->
-I am a research scientist working at the intersection of generative modeling, multimodal learning, and information theory. My research focuses on multimodal generative models and diffusion-based approaches for language, vision, and heterogeneous data. I am especially interested in diffusion language models, multimodal alignment and principled methods for understanding and improving modern foundation models.
+I am a research scientist interested in how models learn and generate structure from multimodal data. My research lies at the intersection of generative modelling, multimodal learning, and information theory, with applications to language, vision, and scientific data. I am particularly interested in multimodal alignment and in principled ways of understanding and improving modern foundation models.
